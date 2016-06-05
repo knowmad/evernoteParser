@@ -28,7 +28,7 @@ var content = `
                   margin-bottom: 2px;
                   font-family: Helvetica;
                   color: #5f5f5f;
-                  line-height: 24px;">Jay Henry</span>
+                  line-height: 24px;">Larry Wall</span>
               </span>
               
               <span>
@@ -39,7 +39,7 @@ var content = `
                   margin-bottom: 2px;
                   font-family: Helvetica;
                   color: #5f5f5f;
-                  line-height: 24px;">Vice President</span>
+                  line-height: 24px;">Grand Pubah</span>
               </span>
               
               <span>
@@ -48,7 +48,7 @@ var content = `
                   font-size: 16px;
                   font-family: Helvetica;
                   color: #6f6f6f;
-                  line-height: 22px;">Pamlico Capital</span>
+                  line-height: 22px;">Perl Foundation</span>
               </span>
               
               <!--x-evernote:contact-url-->
@@ -68,11 +68,16 @@ registerTestSuite(innerHTMLTest);
 
 addTest(innerHTMLTest, function ReturnsTitle() {
   var title = input.innerHTML(content, 'contact-title');
-  expectEq('Vice President', title);
+  expectEq('Grand Pubah', title);
 });
 
 
 addTest(innerHTMLTest, function ReturnsCompany() {
   var company = input.innerHTML(content, 'contact-org');
-  expectEq('Pamlico Capital', company);
+  expectEq('Perl Foundation', company);
+});
+
+addTest(innerHTMLTest, function ReturnsName() {
+  var name = input.innerHTML(content, 'display-as');
+  expectEq('Larry Wall', name);
 });

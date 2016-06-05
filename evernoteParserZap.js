@@ -8,7 +8,7 @@ var innerHTML = function(src,val) {
 };
 
 // Contact Name
-var name = input.rawTitle.replace('- Business Card', '') || '';
+var name = innerHTML(input.contentHTML, 'display-as');
 var firstName = name.match(/[^\s]+/);
 var lastName = name.substring(name.search(/\s/)+1, name.length);
 
