@@ -8,7 +8,6 @@ This package contains files and tests which can be used to build a Zap for Zapie
 2. Add a Run Javascript step (see Zapier-Javascript.jpg for a screenshot):
   1. Set input as follows:
     * rawText = Content no Html
-    * rawTitle = Title
     * contentHTML = Content HTML
   2. Paste the content from evernoteParserZap.js into the code window
 3. Add an action step to push the name, company, title, phone, etc to your end destination (e.g., Google Contacts or a CRM)
