@@ -9,7 +9,7 @@ var innerHTML = function(src,val) {
 
 // Contact Name
 var name = innerHTML(input.contentHTML, 'display-as');
-var firstName = name.match(/[^\s]+/);
+var firstName = name.match(/[^\s]+/)[0];
 var lastName = name.substring(name.search(/\s/)+1, name.length);
 
 // Parse the raw content (non html)
